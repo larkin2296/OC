@@ -12,7 +12,7 @@
         <meta content="" name="description" />
         <meta content="" name="author" />
         
-        <title>{{ config('app.name', '药物警戒系统') }}</title>
+        <title>{{ config('app.name', '油卡管理系统') }}</title>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         
@@ -52,7 +52,7 @@
         <div class="content">
             @yield('content')
         </div>
-        <div class="copyright hide"> 2018 © 梅斯医学 药物警戒后台系统 </div>
+        <div class="copyright hide"> 2018 © OC 油卡管理系统 </div>
         <!-- END LOGIN -->
         <!--[if lt IE 9]>
         <script src="{{ asset('/vendor/respond.min.js') }}"></script>

@@ -24,13 +24,19 @@ class LoginController extends Controller{
     /*展示注册页面*/
     public function index()
     {
-     return view(getThemeTemplate($this->folder  . '.login'));
+        if( request()->ajax() ) {
+            return $this->service->datatables();
+        } else {
+            $results = $this->service->index();
+            return view(getThemeTemplate($this->folder  . '.index'))->with($results);
+        }
+
     }
     /*注册用户*/
     public function login()
     {
         $results = $this->service->create();
-        return response()->all($results);
+        return response()->json($results);
     }
 
 }

@@ -1,5 +1,4 @@
-@extends(getThemeTemplate('layout.admin'))
-
+{{--@extends(getThemeTemplate('layout.admin'))--}}
 @push('css')
 @endpush
 
@@ -12,11 +11,12 @@
             </div>
         </div>
         <div class="portlet-body">
-            dashbord
+            dashbord1232
         </div>
     </div>
 @endsection
 
 @push('js')
-	
+
 @endpush
+{{--1212323132--}}

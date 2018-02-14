@@ -49,6 +49,19 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
+            'truename' => 'required|string|max:255',
+            'sex' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'mobile' => 'required|string|max:255',
+            'qq_num' => 'required|string|max:255',
+            'bank' => 'required|string|max:255',
+            'bank_name' => 'required|string|max:255',
+            'open_bank' => 'required|string|max:255',
+            'identity' => 'required|string|max:255',
+            'is_check_email' => 'required|string|max:255',
+            'company_name' => 'required|string|max:255',
+            'company_id' => 'required|string|max:255',
+            'referee_id' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -64,6 +77,19 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'truename' => $data['truename'],
+            'sex' => $data['sex'],
+            'city' => $data['city'],
+            'mobile' => $data['mobile'],
+            'qq_num' => $data['qq_num'],
+            'bank' => $data['bank'],
+            'bank_name' => $data['bank_name'],
+            'open_bank' => $data['open_bank'],
+            'identity' => $data['identity'],
+            'is_check_email' => $data['is_check_email'],
+            'company_name' => $data['company_name'],
+            'company_id' => $data['company_id'],
+            'referee_id' => $data['referee_id'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

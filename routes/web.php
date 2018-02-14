@@ -35,11 +35,13 @@ $router->group(['middleware' => "web"], function($router) {
 		'as' => 'language'
 	]);
 	// 'middleware' => ['auth'] 关闭auth lt测试
-	$router->group(['prefix' => 'admin', 'as' => 'admin.'], function($router) {
+	$router->group(['prefix' => 'admin', 'as' => 'admin.','middleware' => ['auth']], function($router) {
+	    /*默认首页*/
+	    require(__DIR__.'/routes/dash.php');
 	    /*用户信息*/
 		require(__DIR__ . '/routes/registered/route.php');
-        /*基础信息*/
-        require(__DIR__ . '/routes/basic/route.php');
+        /*油卡管理*/
+        require(__DIR__ . '/routes/management/route.php');
 
     });
 });

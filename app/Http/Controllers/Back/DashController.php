@@ -12,10 +12,12 @@ class DashController extends Controller
 
 	/*模板文件夹*/
     protected $folder = 'back.dash';
+    /**/
     protected $routePrefix = 'admin.dash';
 
     public function index()
     {
+        //dd(123);
     	return view(getThemeTemplate($this->folder . '.index'));
     }
 }

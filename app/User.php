@@ -46,7 +46,7 @@ class User extends Authenticatable implements Transformable
     {
         return $this->encodeId('user', $this->id);
     }
-
+    //公司id
     public function company()
     {
         return $this->hasOne(Company::class, 'id', 'company_id');

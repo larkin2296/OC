@@ -29,6 +29,8 @@ use App\Repositories\Interfaces\DataTraceRepository;
 use App\Repositories\Interfaces\EnterpriseRepository;
 /*OC*/
 use App\Repositories\Interfaces\OcloginRepository;
+use App\Repositories\Interfaces\ManagementRepository;
+use App\Repositories\Interfaces\PurchaseRepository;
 
 
 class Service
@@ -60,6 +62,8 @@ class Service
     public $enterpriseRepo;
     /*OC*/
     public $ocloginRepo;
+    public $managementRepo;
+    public $purchaseRepo;
 	public function __construct()
 	{
 		$this->userRepo = app(UserRepository::class);
@@ -89,6 +93,8 @@ class Service
         $this->enterpriseRepo = app(EnterpriseRepository::class);
         /*OC*/
         $this->ocloginRepo = app(OcloginRepository::class);
+        $this->managementRepo = app(ManagementRepository::class);
+        $this->purchaseRepo = app(PurchaseRepository::class);
 
     }
 }

@@ -4,9 +4,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class CreateLogisticsTable.
+ * Class CreatePurchasesTable.
  */
-class CreateLogisticsTable extends Migration
+class CreatePurchasesTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -15,7 +15,7 @@ class CreateLogisticsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('logistics', function(Blueprint $table) {
+		Schema::create('purchases', function(Blueprint $table) {
             $table->increments('id');
 
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreateLogisticsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('logistics');
+		Schema::drop('purchases');
 	}
 }

@@ -18,6 +18,15 @@ class LoginService extends BasicService
         parent::__construct();
         $this->builder = $builder;
     }
+    public function datatables()
+    {
+     //页面信息
+        dd(123);
+    }
+    public function index()
+    {
+     //页面信息
+    }
     /*注册*/
     public function create()
     {
@@ -40,4 +49,5 @@ class LoginService extends BasicService
             ]);
         }
     }
+    /*登录*/
 }
