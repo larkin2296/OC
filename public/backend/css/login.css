@@ -1,0 +1,23 @@
+html,body{height: 100%;}
+.login{
+    background: url('../images/login-bg.jpg') no-repeat center center/cover;
+}
+.login .content-wrap {
+  width: 300px;
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-55%);
+}
+.login .content .form-box{
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 15px;
+}
+.login .login-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF;
+    letter-spacing: 4px;
+}
