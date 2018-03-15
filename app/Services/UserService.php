@@ -120,7 +120,6 @@ class UserService extends Service
 					event(new \App\Events\User\SetPassword($user));
 					/*设置单位信息*/
 					event(new \App\Events\SetCompany($user, $companyId));
-
 					/*清除用户菜单缓存*/
 					event(new \App\Events\Menu\ClearUserMenuCache($user->id));
 				} else {
