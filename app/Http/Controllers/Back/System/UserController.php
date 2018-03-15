@@ -36,6 +36,7 @@ class UserController extends Controller
      */
     public function index()
     {
+        dd(1230);
     	if( request()->ajax() ) {
     		return $this->service->datatables();
     	} else {

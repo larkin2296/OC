@@ -34,14 +34,11 @@ $router->group(['middleware' => "web"], function($router) {
 		'uses' => "LanguageController@set",
 		'as' => 'language'
 	]);
-	// 'middleware' => ['auth'] 关闭auth lt测试
 	$router->group(['prefix' => 'admin', 'as' => 'admin.','middleware' => ['auth']], function($router) {
 	    /*默认首页*/
-	    require(__DIR__.'/routes/dash.php');
-	    /*用户信息*/
-		require(__DIR__ . '/routes/registered/route.php');
-        /*油卡管理*/
-        require(__DIR__ . '/routes/management/route.php');
+	    require(__DIR__.'/oc_routes/dash.php');
+        /*采购商*/
+        require(__DIR__ . '/oc_routes/management/route.php');
 
 
     });
