@@ -11,9 +11,9 @@ Class PurchaseController extends Controller{
 
     use EncryptTrait;
     /*模板文件夹*/
-    protected $folder = 'back.management.card';
+    protected $folder = 'back..card';
     /*路由*/
-    protected $routePrefix = 'admin.management';
+    protected $routePrefix = 'admin.managements';
 
     protected $encryptConnection = 'management';
 
@@ -24,5 +24,15 @@ Class PurchaseController extends Controller{
         $this->service = $service;
 
         $this->setEncryptConnection($this->encryptConnection);
+    }
+    /*卡密列表*/
+    public function index()
+    {
+        if( request()->ajax() ) {
+            return $this->service->datatables();
+        } else {
+            $results = $this->service->index();
+            return view(getThemeTemplate($this->folder  . '.index'))->with($results);
+        }
     }
 }

@@ -9,7 +9,7 @@
                 {{ csrf_field() }}
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label class="control-label visible-ie8 visible-ie9">用户名</label>
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="请输入用户名" name="name" value="{{ old('name') }}" required autofocus /> 
+                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="请输入用户名" name="name" value="{{ old('name') }}" required autofocus />
                     @if ($errors->has('email'))
                         <span class="help-block">
                             <strong>{{ $errors->first('email') }}</strong>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label visible-ie8 visible-ie9">密码</label>
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="请输入密码" name="password" /> 
+                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="请输入密码" name="password" />
                     @if ($errors->has('password'))
                         <span class="help-block">
                             <strong>{{ $errors->first('password') }}</strong>
@@ -40,6 +40,6 @@
             </form>
         </div>
     </div>
-    
+
     <!-- END LOGIN FORM -->
 @endsection

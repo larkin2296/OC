@@ -20,6 +20,10 @@ class CreateManagementsTable extends Migration
             $table->string('oc_number')->nullable()->comment('油卡编号');
             $table->string('name')->nullable()->comment('真实姓名');
             $table->string('card_number')->nullable()->comment('油卡号');
+            $table->string('order_type')->nullable()->comment('订单类型');
+            $table->string('province')->nullable()->comment('省份');
+            $table->string('province_id')->nullable()->comment('省份id');
+            $table->string('number')->nullable()->comment('编号');
             $table->string('user_id')->nullable()->comment('用户id');
             $table->tinyInteger('status')->nullable()->default(1)->comment('1-正常，2-关闭');
             $table->timestamps();

@@ -2,10 +2,13 @@
 $router->group([], function($router) {
     $router->group(['prefix' => 'management', 'as' => 'management.'], function ($router) {
         /*油卡管理*/
-        $router->get('index', [
-            'uses' => 'ManagementController@index',
-            'as' => 'index'
-        ]);
+//        $router->get('index', [
+//            'uses' => 'ManagementController@index',
+//            'as' => 'index'
+//        ]);
+        $router->get('index', function(){
+            dd(122);
+});
         /*油卡添加*/
         $router->post('create', [
             'uses' => 'ManagementController@create',
@@ -20,6 +23,12 @@ $router->group([], function($router) {
         $router->get('{id}/update', [
             'uses' => 'ManagementController@update',
             'as' => 'update'
+        ]);
+
+        /*excel*/
+        $router->get('excel', [
+            'uses' => 'ManagementController@excel',
+            'as' => 'excel'
         ]);
     });
     /*资源路由*/

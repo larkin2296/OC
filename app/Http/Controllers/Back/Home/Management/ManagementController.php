@@ -12,10 +12,10 @@ class ManagementController extends Controller
 
     use EncryptTrait;
     /*模板文件夹*/
-    protected $folder = 'back.management.card';
+    protected $folder = 'ocback.managements';
     /*路由*/
     protected $routePrefix = 'admin.management';
-
+    /*加密id*/
     protected $encryptConnection = 'management';
 
     protected $service;
@@ -52,6 +52,17 @@ class ManagementController extends Controller
     public function delete($id)
     {
         $results = $this->service->destroy($id);
+        return response()->json($results);
+    }
+    //修改页面
+    public function store()
+    {
+        dd(121);
+    }
+
+    public function excel()
+    {
+        $results = $this->service->excel();
         return response()->json($results);
     }
 

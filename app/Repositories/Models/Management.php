@@ -22,6 +22,6 @@ class Management extends Model implements Transformable
      */
     protected $table = 'management';
 
-    protected $fillable = ['oc_number','name','card_number','user_id','status'];
+    protected $fillable = ['oc_number','name','card_number','user_id','status','province','province_id','order_type','number'];
 
 }

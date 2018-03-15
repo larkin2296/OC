@@ -17,7 +17,6 @@ class User extends Authenticatable implements Transformable
     use TransformableTrait;
     use SoftDeletes;
     use ModelTrait;
-
     /**
      * The attributes that are mass assignable.
      *
