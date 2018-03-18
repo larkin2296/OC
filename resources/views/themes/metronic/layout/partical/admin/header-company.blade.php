@@ -1,4 +1,5 @@
-<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+{{--{{dd(123456)}}--}}
+{{--<!-- BEGIN RESPONSIVE MENU TOGGLER -->--}}
 <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
 <!-- END RESPONSIVE MENU TOGGLER -->
 <!-- BEGIN PAGE ACTIONS -->
@@ -11,19 +12,19 @@
         </button>
         <ul class="dropdown-menu" role="menu">
             <li>
-                <a href="{{ route('admin.company.exchange', 0) }}">
+                {{--<a href="{{ route('admin.company.exchange', 0) }}">--}}
                     <i class="icon-share"></i> 管理员界面 </a>
             </li>
             <li class="divider"> </li>
-            @if($headerCompanies)
-                @foreach($headerCompanies as $company)
-                    <li>
-                        <a href="{{ route('admin.company.exchange', $company->id_hash) }}">
-                            <i class="icon-share"></i> {{ $company->name }} </a>
-                    </li>
-                    <li class="divider"> </li>
-                @endforeach
-            @endif
+            {{--@if($headerCompanies)--}}
+                {{--@foreach($headerCompanies as $company)--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ route('admin.company.exchange', $company->id_hash) }}">--}}
+                            {{--<i class="icon-share"></i> {{ $company->name }} </a>--}}
+                    {{--</li>--}}
+                    {{--<li class="divider"> </li>--}}
+                {{--@endforeach--}}
+            {{--@endif--}}
         </ul>
     </div>
 </div>

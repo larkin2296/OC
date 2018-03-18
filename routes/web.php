@@ -29,6 +29,7 @@
 
 /*网站中间键*/
 $router->group(['middleware' => "web"], function($router) {
+
     /*设置语言*/
     $router->get('language/{language}', [
         'uses' => "LanguageController@set",
@@ -41,11 +42,11 @@ $router->group(['middleware' => "web"], function($router) {
         /*采购商*/
         require(__DIR__ . '/oc_routes/purchasing/route.php');
 
+       Auth::routes();
     });
-
-    Auth::routes();
-
     Route::get('/home', 'HomeController@index')->name('home');
 
-
 });
+
+
+

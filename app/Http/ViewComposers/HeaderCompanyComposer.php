@@ -14,7 +14,7 @@ class HeaderCompanyComposer
 
 	/*输出数据 */
 	public function compose(View $view)
-	{	
+	{
 		/*顶部公司*/
 		$headerCompanies = $this->companyRepo->all()->keyBy('id');
 		$view->with('headerCompanies', $headerCompanies);

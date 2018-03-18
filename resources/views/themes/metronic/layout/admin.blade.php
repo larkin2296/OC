@@ -7,7 +7,7 @@
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8" />
-        <title>药物警戒系统</title>
+        <title>lalal</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
@@ -43,7 +43,7 @@
         </style>
         @stack('css')
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" /> 
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <!-- END HEAD -->
 
@@ -65,7 +65,7 @@
         <!-- END MODAL -->
         <!--[if lt IE 9]>
         <script src="{{ asset('vendor/respond.min.js') }}"></script>
-        <script src="{{ asset('vendor/excanvas.min.js') }}"></script> 
+        <script src="{{ asset('vendor/excanvas.min.js') }}"></script>
         <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
         <script src="{{asset('vendor/jquery.min.js')}}" type="text/javascript"></script>
@@ -87,7 +87,7 @@
         <script src="{{asset('backend/js/common.js')}}"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        {{-- <script src="{{asset('themes/metronic/pages/scripts/dashboard.js')}}" type="text/javascript"></script> --}}
+         <script src="{{asset('themes/metronic/pages/scripts/dashboard.js')}}" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{asset('themes/metronic/layouts/layout4/scripts/layout.js')}}" type="text/javascript"></script>

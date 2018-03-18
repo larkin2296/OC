@@ -22,7 +22,6 @@ class ExchangeCompany
      */
     public function handle($request, Closure $next)
     {
-        dd(123);
         $companyId = getRouteParam('company');
         $companyId = $this->decodeId($companyId);
 

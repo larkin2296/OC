@@ -1,5 +1,5 @@
 <div class="page-container">
-    @include(getThemeTemplate('layout.partical.admin.sidebar'))
+    {{--@include(getThemeTemplate('layout.partical.admin.sidebar'))--}}
     <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         <!-- BEGIN CONTENT BODY -->
@@ -28,7 +28,7 @@
             <!-- END PAGE BREADCRUMB -->
             <!-- BEGIN PAGE BASE CONTENT -->
             <!-- BEGIN DASHBOARD STATS 1-->
-            @yield('content')
+            {{--@yield('content')--}}
             <!-- END PAGE BASE CONTENT -->
         </div>
         <!-- END CONTENT BODY -->

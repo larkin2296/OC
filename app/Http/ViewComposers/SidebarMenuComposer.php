@@ -17,7 +17,8 @@ class SidebarMenuComposer
 
 	/*输出数据 */
 	public function compose(View $view)
-	{	
+	{
+	    dd(true);
 		/*左侧菜单*/
 		$sidebarMenus = $this->menuList(true);
 		$view->with('sidebarMenus', $sidebarMenus);
