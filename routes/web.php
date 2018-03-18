@@ -67,4 +67,3 @@ Route::get('/show',function() {
 Route::get('/purchasing',function(){
     return view('themes/metronic/ocback/backstage/purchasing/left_meau');
 });
-
