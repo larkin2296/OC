@@ -51,11 +51,17 @@ class LoginController extends Controller
      */
     protected function credentials($request)
     {
+        //dd(request()->all());
+        try{
+            $data = $request->only($this->username(), 'password');
 
-        $data = $request->only($this->username(), 'password');
-        return array_merge($data, [
-            'status' => getCommonCheckValue(true)
-        ]);
+            return array_merge($data, [
+                'status' => getCommonCheckValue(true)
+            ]);
+        } catch (Exception $e){
+            dd($e);
+        }
+
     }
 
 

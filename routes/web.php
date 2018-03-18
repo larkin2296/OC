@@ -29,30 +29,32 @@
 
 /*网站中间键*/
 $router->group(['middleware' => "web"], function($router) {
-	/*设置语言*/
-	$router->get('language/{language}', [
-		'uses' => "LanguageController@set",
-		'as' => 'language'
-	]);
-	// 'middleware' => ['auth'] 关闭auth lt测试
-	$router->group(['prefix' => 'admin', 'as' => 'admin.','middleware' => ['auth']], function($router) {
-	    /*默认首页*/
-	    require(__DIR__.'/routes/dash.php');
-	    /*用户信息*/
-		require(__DIR__ . '/routes/registered/route.php');
-        /*油卡管理*/
-        require(__DIR__ . '/routes/management/route.php');
+    /*设置语言*/
+    $router->get('language/{language}', [
+        'uses' => "LanguageController@set",
+        'as' => 'language'
+    ]);
+
+    $router->group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function ($router) {
+        /*默认首页*/
+        require(__DIR__ . '/oc_routes/dash.php');
+        /*采购商*/
+        require(__DIR__ . '/oc_routes/management/route.php');
 
 
     });
-});
 
-Auth::routes();
+    Auth::routes();
 
+<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/new', function(){
     return view('new');
 });
 Route::get('/show',function(){
     return view('themes/metronic/ocback/user/show');
+=======
+    Route::get('/home', 'HomeController@index')->name('home');
+
+>>>>>>> 7c032ac6ab02f3f54c185173afc7e7bad8ae8613
 });
