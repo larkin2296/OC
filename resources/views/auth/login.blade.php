@@ -1,9 +1,8 @@
-@extends('layouts.app')
+@extends('themes.metronic.ocback.user.show')
 
 @section('content')
     <!-- BEGIN LOGIN FORM -->
     <div class="content-wrap">
-        <h1 class="login-title">Login</h1>
         <div class="form-box">
             <form class="login-form" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
