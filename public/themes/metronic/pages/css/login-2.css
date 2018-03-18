@@ -10,7 +10,7 @@ Login page
 
 .login .logo {
   margin: 0 auto;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   padding: 15px;
   text-align: center; }
 
@@ -51,6 +51,9 @@ Login page
   border: 1px solid #FFF;
   height: 43px;
   color: #333; }
+#male,#female{
+  margin-left: -9px;
+}
   .login .content .form-control:focus,
   .login .content .form-control:active {
     border: 1px solid #83b8db; }
@@ -178,7 +181,8 @@ Login page
 
 @media (max-width: 1400px) {
   .login .logo {
-    margin-top: 100px; } }
+    /*margin-top: 100px; */
+  } }
 
 @media (max-width: 480px) {
   /***

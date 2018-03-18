@@ -163,6 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -231,6 +232,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
          'Language' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
+        'Form' => Illuminate\Html\FormFacade::class,
     ],
 
 ];

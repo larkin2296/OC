@@ -50,4 +50,9 @@ $router->group(['middleware' => "web"], function($router) {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/new', function(){
+    return view('new');
+});
+Route::get('/show',function(){
+    return view('themes/metronic/ocback/user/show');
+});

@@ -42,8 +42,8 @@
                             <label for="sex" class="col-md-4 control-label">性别</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="sex" value="{{ old('sex') }}" required autofocus>
-
+                                男：<input id="male" type="radio" class="form-control" name="sex" value="0" required autofocus>
+                                女：<input id="female" type="radio" class="form-control" name="sex" value="1" />
                                 @if ($errors->has('sex'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('sex') }}</strong>
@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <label for="password-confirm" class="col-md-4 control-label">确认密码</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -91,7 +91,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Register
+                                    注册
                                 </button>
                             </div>
                         </div>
