@@ -1,6 +1,6 @@
 <?php
 
-$router->group(['namespace'=>'Ocback/Backstage/Purchasing'], function($router) {
+$router->group(['namespace'=>'BackCard/Purchasing'], function($router) {
 
     require(__DIR__.'/purchasing.php');
 
