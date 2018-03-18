@@ -26,4 +26,5 @@ $router->group([], function($router) {
     });
     /*资源路由*/
     $router->resource('questioning', 'QuestioningController');
+    //create show destroy
 });

@@ -51,7 +51,6 @@ class LoginController extends Controller
      */
     protected function credentials($request)
     {
-        //dd(request()->all());
         try{
             $data = $request->only($this->username(), 'password');
 

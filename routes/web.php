@@ -41,20 +41,16 @@ $router->group(['middleware' => "web"], function($router) {
         /*采购商*/
         require(__DIR__ . '/oc_routes/management/route.php');
 
-
     });
 
     Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/new', function(){
-    return view('new');
-});
-Route::get('/show',function(){
-    return view('themes/metronic/ocback/user/show');
-
     Route::get('/home', 'HomeController@index')->name('home');
-
-
+    Route::get('/new', function () {
+        return view('new');
+    });
+    Route::get('/show', function () {
+        return view('themes/metronic/ocback/user/show');
+    });
 });
