@@ -55,7 +55,6 @@ $router->group(['middleware' => "web"], function($router) {
         return view('themes/metronic/ocback/user/show');
     });
 });
-<<<<<<< HEAD
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -69,7 +68,3 @@ Route::get('/purchasing',function(){
     return view('themes/metronic/ocback/backstage/purchasing/left_meau');
 });
 
-
-
-=======
->>>>>>> ca3ff7668da337c6acb9117b76261fa4a89c74f0
