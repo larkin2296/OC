@@ -36,10 +36,6 @@ class UserController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        dd(1230);
-=======
->>>>>>> daab3c90c5bd55c22d3d2437ec68cbb8ec77370e
     	if( request()->ajax() ) {
     		return $this->service->datatables();
     	} else {
