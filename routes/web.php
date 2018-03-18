@@ -54,5 +54,8 @@ Route::get('/new', function(){
 Route::get('/show',function() {
     return view('themes/metronic/ocback/user/show');
 });
+Route::get('/purchasing',function(){
+    return view('themes/metronic/ocback/backstage/purchasing/left_meau');
+});
 
 });
