@@ -1,27 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="xxxxx">
-    <meta name="author" content="xxxxx">
-    <meta name="keyword" content="xxxxx">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>xxxxx</title>
-    <!-- start: Css -->
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/bootstrap.min.css')}}">
-    <!-- plugins -->
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/plugins/font-awesome.min.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/plugins/simple-line-icons.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/plugins/animate.min.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/plugins/fullcalendar.min.css')}}"/>
-    <link href="{{URL::asset('asset/css/style.css')}}" rel="stylesheet">
-    <!-- end: Css -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="{{URL::asset('asset/js/html5shiv.min.js')}}"></script>
-    <script src="{{URL::asset('asset/js/respond.min.js')}}"></script>
-    <![endif]-->
-</head>
+@extends('themes.metronic.ocback.backstage.public.css.p_css')
+@yield('p_css')
 
 <body id="mimin" class="dashboard">
 <!-- start: Header -->
@@ -134,17 +114,7 @@
     </div>
 </div>
 <!-- end: content -->
-<!-- start: Javascript -->
-<script src="{{URL::asset('asset/js/jquery.min.js')}}"></script>
-<script src="{{URL::asset('asset/js/jquery.ui.min.js')}}"></script>
-<script src="{{URL::asset('asset/js/bootstrap.min.js')}}"></script>
-<!-- plugins -->
-<script src="{{URL::asset('asset/js/plugins/jquery.nicescroll.js')}}"></script>
-<!-- custom -->
-{{--<script src="{{URL::asset('asset/js/main.js')}}"></script>--}}
-<!-- end: Javascript -->
-<script>
-    $("#left-menu-2").click() ;
-</script>
+@extends('themes.metronic.ocback.backstage.public.js.p_js')
+@yield('p_js')
 </body>
 </html>
