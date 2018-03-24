@@ -14,11 +14,6 @@
     <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/plugins/animate.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/css/plugins/fullcalendar.min.css')}}"/>
     <link href="{{URL::asset('asset/css/style.css')}}" rel="stylesheet">
-    <!-- end: Css -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="{{URL::asset('asset/js/html5shiv.min.js')}}"></script>
-    <script src="{{URL::asset('asset/js/respond.min.js')}}"></script>
-    <![endif]-->
+
 </head>
     @show
