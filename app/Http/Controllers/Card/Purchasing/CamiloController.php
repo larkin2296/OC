@@ -8,11 +8,9 @@ use App\Services\UserService as Service;
 use Illuminate\Validation\Rule;
 
 
-class KamiController extends Controller
+class CamiloController extends Controller
 {
     public function index(){
-
-        //dd(1320);
-        return view('themes.metronic.ocback.backstage.purchasing.kami');
+        return view('themes.metronic.ocback.backstage.purchasing.camilo');
     }
 }

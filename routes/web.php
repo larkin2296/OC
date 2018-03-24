@@ -39,12 +39,16 @@ $router->group(['middleware' => "web"], function($router) {
     $router->group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function ($router) {
         /*默认首页*/
         require(__DIR__ . '/oc_routes/dash.php');
+        /*后台首页*/
+        require(__DIR__ . '/oc_routes/backstage.php');
         /*采购商*/
         require(__DIR__ . '/oc_routes/purchasing/route.php');
 
-       Auth::routes();
+
+
     });
-    Route::get('/home', 'HomeController@index')->name('home');
+    Auth::routes();
+    Route::get('/home', 'Card\Index\LeftMeauController@index')->name('home');
 
 });
 
