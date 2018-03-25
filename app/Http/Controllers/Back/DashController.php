@@ -17,7 +17,6 @@ class DashController extends Controller
 
     public function index()
     {
-        //dd(123);
     	return view(getThemeTemplate($this->folder . '.index'));
     }
 }

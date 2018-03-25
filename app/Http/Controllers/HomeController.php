@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Traits\ControllerTrait;
 class HomeController extends Controller
 {
+    use ControllerTrait;
     /**
      * Create a new controller instance.
      *
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+      //  dd(route('admin.backstage.p_index'));
+       //return redirect()->route('admin.backstage.p_index');
     }
 }

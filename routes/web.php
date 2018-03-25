@@ -36,19 +36,40 @@ $router->group(['middleware' => "web"], function($router) {
         'as' => 'language'
     ]);
 
-    $router->group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function ($router) {
+    Auth::routes();
+
+    $router->group(['middleware' => ['auth']], function ($router) {
+        /*默认首页*/
+        $router->get('/',[
+            'uses' => 'Card\DashController@index',
+            'as' => 'index',
+        ]);
+
+        $router->get('home',[
+        'uses' => 'Card\DashController@index',
+        'as' => 'index',
+       ])->name('home');
+
+            $router->get('create',function (){
+                    dd(123);
+            })->name('create');
+
+
+    $router->group(['prefix' => 'admin', 'as' => 'admin.',], function ($router) {
         /*默认首页*/
         require(__DIR__ . '/oc_routes/dash.php');
         /*后台首页*/
-        require(__DIR__ . '/oc_routes/backstage.php');
+        require(__DIR__ . '/oc_routes/backstage/route.php');
         /*采购商*/
         require(__DIR__ . '/oc_routes/purchasing/route.php');
 
 
 
     });
-    Auth::routes();
-    Route::get('/home', 'Card\Index\LeftMeauController@index')->name('home');
+  });
+
+
+//    Route::get('/home', 'Card\Index\LeftMeauController@index')->name('home');
 
 });
 

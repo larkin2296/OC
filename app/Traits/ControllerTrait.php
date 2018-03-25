@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Traits;
 
@@ -9,7 +9,7 @@ Trait ControllerTrait
 {
     public $storeReturn;
     public $updateReturn;
-    
+
     public function setStoreReturnRoute()
     {
         $this->storeReturn = route($this->routePrefix() . '.index');
@@ -43,7 +43,7 @@ Trait ControllerTrait
         return isset($this->routePrefix) && $this->routePrefix ? $this->routePrefix : '';
     }
 
-	/**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -178,7 +178,7 @@ Trait ControllerTrait
                 $rules = $this->{$method}();
             }
         }
-        
+
         return $rules;
     }
 
