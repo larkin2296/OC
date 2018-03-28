@@ -1,0 +1,30 @@
+<?php
+return [
+    /*订单类型
+    key_word是关键字
+    chinese是中文
+    value是值
+    */
+  'order_type'=>[
+      '0'=>[
+          'key_word'=>'no_pay',
+          'chinese'=>'未付款',
+          'value'=>'0',
+      ],
+      '1'=>[
+          'key_word'=>'no_finished',
+          'chinese'=>'未完成',
+          'value'=>'1',
+      ],
+      '2'=>[
+          'key_word'=>'finished',
+          'chinese'=>'已完成',
+          'value'=>'2',
+      ],
+      '3'=>[
+          'key_word'=>'misstake',
+          'chinese'=>'问题订单',
+          'value'=>'3',
+      ],
+  ],
+];

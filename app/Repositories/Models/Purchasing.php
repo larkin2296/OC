@@ -7,11 +7,11 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Management.
+ * Class Purchasing.
  *
  * @package namespace App\Repositories\Models;
  */
-class Management extends Model implements Transformable
+class Purchasing extends Model implements Transformable
 {
     use TransformableTrait;
 
@@ -23,5 +23,6 @@ class Management extends Model implements Transformable
     protected $table = 'management';
 
     protected $fillable = ['oc_number','name','card_number','user_id','status','province','province_id','order_type','number'];
+
 
 }

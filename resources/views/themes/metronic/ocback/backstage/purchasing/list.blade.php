@@ -29,11 +29,10 @@
                   <label class="col-sm-1 control-label text-right">订单类型</label>
                   <div class="col-sm-2">
                     <select class="form-control">
-                                    <option>option one</option>
-                                    <option>option two</option>
-                                    <option>option three</option>
-                                    <option>option four</option>
-                                  </select>
+                                @foreach($order_type as $order)
+                                <option value="{{$order['value']}}" id="{{$order['key_word']}}">{{$order['chinese']}}</option>
+                                @endforeach
+                    </select>
                   </div>
                   <label class="col-sm-1 control-label text-right">卡号</label>
                   <div class="col-sm-2">
