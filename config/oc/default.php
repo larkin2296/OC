@@ -5,13 +5,23 @@
             'name'=>'',
             'c_name'=>''
         ],
+
+''=>[
+            'ckey'=>'',
+            'c_name'=>'',
+        ],
  * */
 return [
+    //订单列表
   'list'=>[
+      //查询字段配置
     'query'=>[
         '0'=>[
+            //form类型
             'type'=>'select',
+            //form 名字
             'name'=>'order_type',
+            //中文
             'c_name'=>'订单类型'
         ],
         '1'=>[
@@ -41,9 +51,12 @@ return [
         ]
 
     ],
+      //数据表配置
     'panel'=>[
         '0'=>[
+            //对应字段
             'ckey'=>'number',
+            //中文
             'c_name'=>'订单号',
         ],
         '1'=>[
@@ -65,8 +78,77 @@ return [
     ],
   ],
   'camilo'=>[
-      'query'=>[],
-      'panel'=>[],
+      'query'=>[
+          '0'=>[
+              'type'=>'select',
+              'name'=>'status',
+              'c_name'=>'卡密状态'
+          ],
+          '1'=>[
+              'type'=>'text',
+              'name'=>'commodity',
+              'c_name'=>'商品'
+          ],
+          '2'=>[
+              'type'=>'text',
+              'name'=>'',
+              'c_name'=>'订单号'
+          ],
+          '3'=>[
+              'type'=>'text',
+              'name'=>'',
+              'c_name'=>'卡号'
+          ],
+          '4'=>[
+              'type'=>'select',
+              'name'=>'denomination',
+              'c_name'=>'面额'
+          ],
+          '5'=>[
+              'type'=>'text',
+              'name'=>'trading_time',
+              'c_name'=>'交易时间'
+          ],
+          '6'=>[
+              'type'=>'submit',
+              'name'=>'submit',
+              'c_name'=>'提交'
+          ],
+      ],
+      'panel'=>[
+          '0'=>[
+              'ckey'=>'',
+              'c_name'=>'订单号',
+          ],
+          '1'=>[
+              'ckey'=>'',
+              'c_name'=>'商品',
+          ],
+          '2'=>[
+              'ckey'=>'',
+              'c_name'=>'面额',
+          ],
+          '3'=>[
+              'ckey'=>'',
+              'c_name'=>'交易时间',
+          ],
+          '4'=>[
+              'ckey'=>'',
+              'c_name'=>'卡号',
+          ],
+          '5'=>[
+              'ckey'=>'',
+              'c_name'=>'密码',
+          ],
+          '6'=>[
+              'ckey'=>'',
+              'c_name'=>'卡密状态',
+          ],
+          '7'=>[
+              'ckey'=>'',
+              'c_name'=>'价格',
+          ],
+      ],
   ],
   'camilorecharge'=>[
       'query'=>[],

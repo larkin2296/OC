@@ -27,11 +27,38 @@ return [
           'value'=>'3',
       ],
   ],
+    //省份
   'province'=>[
       '0'=>[
           'key_word'=>'beijing',
           'chinese'=>'北京',
           'value'=>'1',
       ],
-  ]
+  ],
+    //卡密状态
+    'status'=>[
+        '0'=>[
+            'key_word'=>'normal',
+            'chinese'=>'正常',
+            'value'=>'0',
+        ],
+        '1'=>[
+            'key_word'=>'no_normal',
+            'chinese'=>'不正常',
+            'value'=>'1',
+        ],
+    ],
+    //面额
+    'denomination'=>[
+        '0'=>[
+            'key_word'=>'fifty',
+            'chinese'=>'50',
+            'value'=>'50',
+        ],
+        '1'=>[
+            'key_word'=>'hundred',
+            'chinese'=>'100',
+            'value'=>'100',
+        ],
+    ]
 ];
