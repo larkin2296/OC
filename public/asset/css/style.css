@@ -5737,7 +5737,7 @@ ul.timeline > li > .timeline-panel:after {
 /*========Responsive========*/
 @media (max-width: 1200px) {
 #content {
-	padding-left: 230px;
+	padding-left: 9%;
 	padding-right: 0px
 }
 .profile-v1 .profile-v1-cover {

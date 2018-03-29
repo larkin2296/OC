@@ -69,7 +69,6 @@ $router->group(['middleware' => "web"], function($router) {
   });
 
 
-//    Route::get('/home', 'Card\Index\LeftMeauController@index')->name('home');
 
 });
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@extends('themes.metronic.ocback.backstage.public.css.p_css')
-@yield('p_css')
+@include('themes.metronic.ocback.backstage.public.css.p_css')
 <body id="mimin" class="dashboard">
 <!-- start: Header -->
 <nav class="navbar navbar-default header navbar-fixed-top">
@@ -13,7 +12,7 @@
         <li class="user-name"><span></span></li>
         <li class="dropdown avatar-dropdown"> <img src="{{URL::asset('asset/img/avatar.jpg')}}" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
           <ul class="dropdown-menu user-dropdown">
-            <li><a href="#"><span class="fa fa-power-off"></span> 退出登录</a></li>
+            <li><a href="login_out"><span class="fa fa-power-off"></span> 退出登录</a></li>
           </ul>
         </li>
       </ul>
@@ -31,15 +30,6 @@
   </div>
   
 </div>
-
-<!-- start: Javascript --> 
-<script src="{{URL::asset('asset/js/jquery.min.js')}}"></script>
-<script src="{{URL::asset('asset/js/jquery.ui.min.js')}}"></script>
-<script src="{{URL::asset('asset/js/bootstrap.min.js')}}"></script>
-<!-- plugins --> 
-<script src="{{URL::asset('asset/js/plugins/jquery.nicescroll.js')}}"></script>
-<!-- custom --> 
-{{--<script src="{{URL::asset('asset/js/main.js')}}"></script>--}}
-<!-- end: Javascript -->
+@include('themes.metronic.ocback.backstage.public.js.p_js')
 </body>
 </html>

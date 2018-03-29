@@ -34,8 +34,7 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <input class="submit btn btn-danger" type="submit" value="暂停充值">
-                <input class="submit btn btn-danger" type="submit" value="恢复充值">
+                <input class="submit btn btn-danger" type="submit" value="确定充值">
             </div>
         </div>
     </div>

@@ -6,9 +6,7 @@
 <script src="{{URL::asset('asset/js/bootstrap.min.js')}}"></script>
 <!-- plugins -->
 <script src="{{URL::asset('asset/js/plugins/jquery.nicescroll.js')}}"></script>
-<!-- custom -->
-{{--<script src="{{URL::asset('asset/js/main.js')}}"></script>--}}
-<!-- end: Javascript -->
+<script src="{{URL::asset('oc/js/oc.js')}}"></script>
 <script>
     $("#left-menu-2").click() ;
 </script>

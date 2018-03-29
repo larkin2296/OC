@@ -16,7 +16,7 @@ class DirectlyRechargeController extends Controller
         $this->service = $service;
     }
     public function index(){
-        $results=$this->service->get_config_blade(config('oc.default.camilo'));
+        $results=$this->service->get_config_blade(config('oc.default.directlyrecharge'));
         //dd($results);
         return view('themes.metronic.ocback.backstage.purchasing.directlyrecharge')->with($results);
     }

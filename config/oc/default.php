@@ -185,20 +185,28 @@ return [
       ],
       'panel'=>[
           '0'=>[
+              'ckey'=>'checkbox',
+              'c_name'=>'选择',
+          ],
+          '1'=>[
               'ckey'=>'oc_number',
               'c_name'=>'编号',
           ],
-          '1'=>[
+          '2'=>[
               'ckey'=>'name',
               'c_name'=>'姓名',
           ],
-          '2'=>[
+          '3'=>[
               'ckey'=>'card_number',
               'c_name'=>'油卡',
           ],
-          '3'=>[
+          '4'=>[
               'ckey'=>'number_status',
               'c_name'=>'状态',
+          ],
+          '5'=>[
+              'ckey'=>'operation',
+              'c_name'=>'操作',
           ],
       ],
     ],
@@ -207,8 +215,43 @@ return [
       'panel'=>[],
     ],
   'usermessage'=>[
-      'query'=>[],
-      'panel'=>[],
+      'query'=>[
+          '0'=>[
+              'type'=>'text',
+              'name'=>'name',
+              'c_name'=>'账号'
+          ],
+          '1'=>[
+              'type'=>'text',
+              'name'=>'truename',
+              'c_name'=>'昵称'
+          ],
+          '2'=>[
+              'type'=>'password',
+              'name'=>'password',
+              'c_name'=>'密码'
+          ],
+          '3'=>[
+              'type'=>'text',
+              'name'=>'identity',
+              'c_name'=>'身份证号'
+          ],
+          '4'=>[
+              'type'=>'select',
+              'name'=>'province',
+              'c_name'=>'省份'
+          ],
+          '5'=>[
+              'type'=>'select',
+              'name'=>'city',
+              'c_name'=>'城市'
+          ],
+          '6'=>[
+              'type'=>'submit',
+              'name'=>'submit',
+              'c_name'=>'修改'
+          ],
+      ],
     ],
   'message'=>[
       'query'=>[],
