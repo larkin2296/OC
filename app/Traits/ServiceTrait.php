@@ -90,4 +90,13 @@ Trait ServiceTrait
 
 		return $results;
 	}
+	public function get_config_blade($arr){
+        foreach($arr['query'] as &$value){
+            if($value['type'] == 'select'){
+                $url = 'oc.field.'.$value['name'];
+                $value['option'] = config($url);
+            }
+        }
+        return $arr;
+    }
 }

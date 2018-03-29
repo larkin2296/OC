@@ -16,8 +16,9 @@ class ListController extends Controller
     }
 
     public function index(){
-       $order_type = config('oc.field.order_type');
-        return view('themes.metronic.ocback.backstage.purchasing.list')->with('order_type',$order_type);
+        $results=$this->service->get_config_blade(config('oc.default.list'));
+        //dd($results);
+        return view('themes.metronic.ocback.backstage.purchasing.list')->with($results);
     }
     public function search(){
 

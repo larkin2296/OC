@@ -27,4 +27,11 @@ return [
           'value'=>'3',
       ],
   ],
+  'province'=>[
+      '0'=>[
+          'key_word'=>'beijing',
+          'chinese'=>'北京',
+          'value'=>'1',
+      ],
+  ]
 ];

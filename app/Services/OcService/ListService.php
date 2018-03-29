@@ -6,10 +6,6 @@ use App\Services\Service;
 use App\Traits\ResultTrait;
 use App\Traits\ExceptionTrait;
 use App\Traits\ServiceTrait;
-use App\Traits\DictionariesTrait;
-use App\Traits\Services\Report\MainTrait;
-use App\Events\Report\Main;
-use Exception;
 use DB;
 use DataTables;
 

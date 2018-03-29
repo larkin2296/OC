@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-@extends('themes.metronic.ocback.backstage.public.css.p_css')
-@yield('p_css')
-
-<body id="mimin" class="dashboard">
-<!-- start: Header -->
-<!-- end: Header -->
-
-<!-- end: Left Menu -->
-
-<!-- start: content -->
-<div id="content">
+@extends('themes.metronic.ocback.backstage.index.query')
+@section('title')
     <div class="panel">
         <div class="panel-body">
             <div class="col-md-12">
@@ -19,8 +8,8 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 padding-0 form-element">
-        <div class="col-md-12">
+@endsection
+@section('query')
             <div class="panel form-element-padding">
                 <div class="panel-heading">
                     <h4>生成订单</h4>
@@ -58,6 +47,8 @@
                     </div>
                 </div>
             </div>
+@endsection
+@section('panel')
             <div class="panel">
                 <div class="panel-heading">
                     <h3>购物车</h3>
@@ -103,11 +94,4 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- end: content -->
-@extends('themes.metronic.ocback.backstage.public.js.p_js')
-@yield('p_js')
-</body>
-</html>
+@endsection
