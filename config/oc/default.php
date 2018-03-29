@@ -154,9 +154,53 @@ return [
       'query'=>[],
       'panel'=>[],
   ],
+    //直冲订单订购
   'directlyrecharge'=>[
-      'query'=>[],
-      'panel'=>[],
+      'query'=>[
+          '0'=>[
+              'type'=>'select',
+              'name'=>'procurement_type',
+              'c_name'=>'采购方式'
+          ],
+          '1'=>[
+              'type'=>'select',
+              'name'=>'discount',
+              'c_name'=>'折扣'
+          ],
+          '2'=>[
+              'type'=>'text',
+              'name'=>'end_time',
+              'c_name'=>'截止时间'
+          ],
+          '3'=>[
+              'type'=>'text',
+              'name'=>'num',
+              'c_name'=>'采购数量'
+          ],
+          '4'=>[
+              'type'=>'select',
+              'name'=>'oil_card',
+              'c_name'=>'选择油卡'
+          ],
+      ],
+      'panel'=>[
+          '0'=>[
+              'ckey'=>'oc_number',
+              'c_name'=>'编号',
+          ],
+          '1'=>[
+              'ckey'=>'name',
+              'c_name'=>'姓名',
+          ],
+          '2'=>[
+              'ckey'=>'card_number',
+              'c_name'=>'油卡',
+          ],
+          '3'=>[
+              'ckey'=>'number_status',
+              'c_name'=>'状态',
+          ],
+      ],
     ],
   'oilcardbinding'=>[
       'query'=>[],

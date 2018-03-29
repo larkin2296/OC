@@ -90,13 +90,17 @@ Trait ServiceTrait
 
 		return $results;
 	}
+	//获取config里面配置的查询字段和结果表的字段
 	public function get_config_blade($arr){
+	    //循环查询字段
         foreach($arr['query'] as &$value){
+            //如果是select，匹配field里面的option
             if($value['type'] == 'select'){
                 $url = 'oc.field.'.$value['name'];
                 $value['option'] = config($url);
             }
         }
+        //返回
         return $arr;
     }
 }

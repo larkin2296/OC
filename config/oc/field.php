@@ -60,5 +60,17 @@ return [
             'chinese'=>'100',
             'value'=>'100',
         ],
-    ]
+    ],
+    //采购方式
+    'procurement_type'=>[
+
+    ],
+    //折扣
+    'discount'=>[
+
+    ],
+    //油卡选择
+    'oil_card'=>[
+
+    ],
 ];
