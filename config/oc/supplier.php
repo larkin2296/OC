@@ -1,0 +1,87 @@
+<?php
+/*
+ ''=>[
+            'type'=>'',
+            'name'=>'',
+            'c_name'=>''
+        ],
+
+''=>[
+            'ckey'=>'',
+            'c_name'=>'',
+        ],
+ * */
+return [
+    //供货订单列表
+    'supplierlist'=>[
+        //查询字段配置
+        'query'=>[
+            '0'=>[
+                //form类型
+                'type'=>'select',
+                //form 名字
+                'name'=>'platform_type',
+                //中文
+                'c_name'=>'供卡名称'
+            ],
+            '1'=>[
+                'type'=>'select',
+                'name'=>'s_status',
+                'c_name'=>'供货状态'
+            ],
+            '2'=>[
+                'type'=>'select',
+                'name'=>'price',
+                'c_name'=>'面额'
+            ],
+            '3'=>[
+                'type'=>'text',
+                'name'=>'s_time',
+                'c_name'=>'供货时间'
+            ],
+            '4'=>[
+                'type'=>'submit',
+                'name'=>'submit',
+                'c_name'=>'查询'
+            ],
+
+        ],
+        //数据表配置
+        'panel'=>[
+            '0'=>[
+                //对应字段
+                'ckey'=>'number',
+                //中文
+                'c_name'=>'订单号',
+            ],
+            '1'=>[
+                'ckey'=>'s_time',
+                'c_name'=>'供货时间',
+            ],
+            '2'=>[
+                'ckey'=>'platform_type',
+                'c_name'=>'供卡名称',
+            ],
+            '3'=>[
+                'ckey'=>'total_price',
+                'c_name'=>'面额',
+            ],
+            '4'=>[
+                'ckey'=>'s_discount',
+                'c_name'=>'供货折扣',
+            ],
+            '5'=>[
+                'ckey'=>'s_status',
+                'c_name'=>'供货状态',
+            ],
+            '6'=>[
+                'ckey'=>'real_total_price',
+                'c_name'=>'实际销卡面额',
+            ],
+            '7'=>[
+                'ckey'=>'remark',
+                'c_name'=>'备注',
+            ],
+        ],
+    ],
+];

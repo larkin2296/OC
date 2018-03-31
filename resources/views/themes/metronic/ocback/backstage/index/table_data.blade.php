@@ -7,18 +7,15 @@
     </tr>
     </thead>
     <tbody>
-
+        @if($data != null)
         @foreach($data as $v)
     <tr role="row" class="odd">
-        <td>{{$v['oc_number']}}</td>
-        <td>{{$v['name']}}</td>
-        <td>{{$v['oc_code']}}</td>
-        <td>{{$v['identity']}}</td>
-        <td>{{$v['web_account']}}</td>
-        <td>{{$v['status']}}</td>
+        @foreach($table as $d)
+        <td>{{$v["{$d['ckey']}"]}}</td>
+            @endforeach
      </tr>
         @endforeach
-
+        @endif
 
     </tbody>
 </table>

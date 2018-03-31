@@ -79,5 +79,17 @@ return [
     ],
     'commodity'=>[
 
-    ]
+    ],
+    //供卡名称
+    'platform_type'=>[
+
+    ],
+    //供卡状态
+    's_status'=>[
+
+    ],
+    //面额
+    'price'=>[
+
+    ],
 ];
