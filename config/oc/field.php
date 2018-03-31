@@ -76,5 +76,8 @@ return [
     //城市
     'city'=>[
 
+    ],
+    'commodity'=>[
+
     ]
 ];

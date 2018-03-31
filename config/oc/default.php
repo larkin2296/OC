@@ -85,7 +85,7 @@ return [
               'c_name'=>'卡密状态'
           ],
           '1'=>[
-              'type'=>'text',
+              'type'=>'select',
               'name'=>'commodity',
               'c_name'=>'商品'
           ],
@@ -182,6 +182,11 @@ return [
               'name'=>'oil_card',
               'c_name'=>'选择油卡'
           ],
+          '5'=>[
+              'type'=>'submit',
+              'name'=>'submit',
+              'c_name'=>'添加订单'
+          ],
       ],
       'panel'=>[
           '0'=>[
@@ -211,8 +216,69 @@ return [
       ],
     ],
   'oilcardbinding'=>[
-      'query'=>[],
-      'panel'=>[],
+      'query'=>[
+          '0'=>[
+              'type'=>'text',
+              'name'=>'oc_number',
+              'c_name'=>'卡号'
+          ],
+          '1'=>[
+              'type'=>'text',
+              'name'=>'name',
+              'c_name'=>'姓名'
+          ],
+          '2'=>[
+              'type'=>'text',
+              'name'=>'oc_code',
+              'c_name'=>'编号'
+          ],
+          '3'=>[
+              'type'=>'text',
+              'name'=>'identity',
+              'c_name'=>'身份证'
+          ],
+          '4'=>[
+              'type'=>'text',
+              'name'=>'web_account',
+              'c_name'=>'官网账号'
+          ],
+          '5'=>[
+              'type'=>'text',
+              'name'=>'password',
+              'c_name'=>'密码'
+          ],
+          '6'=>[
+              'type'=>'submit',
+              'name'=>'submit',
+              'c_name'=>'绑定'
+          ],
+      ],
+      'panel'=>[
+          '0'=>[
+              'ckey'=>'oc_number',
+              'c_name'=>'卡号',
+          ],
+          '1'=>[
+              'ckey'=>'name',
+              'c_name'=>'姓名',
+          ],
+          '2'=>[
+              'ckey'=>'oc_code',
+              'c_name'=>'编号',
+          ],
+          '3'=>[
+              'ckey'=>'identity',
+              'c_name'=>'身份证',
+          ],
+          '4'=>[
+              'ckey'=>'web_account',
+              'c_name'=>'官网账号',
+          ],
+          '5'=>[
+              'ckey'=>'status',
+              'c_name'=>'油卡状态',
+          ],
+      ],
     ],
   'usermessage'=>[
       'query'=>[

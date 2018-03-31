@@ -7,6 +7,10 @@ $router->group([], function($router) {
             'uses' => 'OilCardBindingController@index',
             'as' => 'index'
         ]);
+        $router->post('create', [
+            'uses' => 'OilCardBindingController@create',
+            'as' => 'create'
+        ]);
     });
 
 });

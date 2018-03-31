@@ -31,6 +31,8 @@ use App\Repositories\Interfaces\EnterpriseRepository;
 use App\Repositories\Interfaces\OcloginRepository;
 use App\Repositories\Interfaces\ManagementRepository;
 use App\Repositories\Interfaces\PurchaseRepository;
+use App\Repositories\Interfaces\PurchasingRepository;
+use App\Repositories\Interfaces\OilCardRepository;
 
 
 class Service
@@ -64,6 +66,7 @@ class Service
     public $ocloginRepo;
     public $managementRepo;
     public $purchaseRepo;
+    public $oilcardbindingRepo;
 	public function __construct()
 	{
 		$this->userRepo = app(UserRepository::class);
@@ -95,5 +98,6 @@ class Service
         $this->ocloginRepo = app(OcloginRepository::class);
         $this->managementRepo = app(ManagementRepository::class);
         $this->purchaseRepo = app(PurchaseRepository::class);
+        $this->oilcardbindingRepo = app(OilCardRepository::class);
     }
 }

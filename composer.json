@@ -15,7 +15,8 @@
         "santigarcor/laratrust": "^5.0",
         "tecnickcom/tcpdf": "^6.2",
         "vinkla/hashids": "^3.3",
-        "yajra/laravel-datatables": "^1.0"
+        "yajra/laravel-datatables": "^1.0",
+        "doctrine/dbal":"v2.4.2"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

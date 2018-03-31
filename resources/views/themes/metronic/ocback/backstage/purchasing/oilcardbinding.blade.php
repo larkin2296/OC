@@ -10,42 +10,13 @@
     </div>
 @endsection
 @section('query')
-    <form class="panel form-element-padding" action="" data-type="json" method="post">
+    <form role="form" class="panel form-element-padding"  method="post" action="{{route('admin.backstage.oil_binding.create')}}">
+        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
         <div class="panel-heading">
             <h4>添加油卡</h4>
         </div>
         <div class="panel-body" style="padding-bottom:30px;">
-            <div class="form-group">
-                <label class="col-sm-1 control-label text-right">卡号</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control">
-                </div>
-                <label class="col-sm-1 control-label text-right">姓名</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control">
-                </div>
-                <label class="col-sm-1 control-label text-right">编号</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-1 control-label text-right">身份证</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control">
-                </div>
-                <label class="col-sm-1 control-label text-right">官网账号</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control">
-                </div>
-                <label class="col-sm-1 control-label text-right">密码</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-sm-2">
-                    <input class="submit btn btn-danger" type="submit" value="提交">
-                </div>
-            </div>
+            @include('themes.metronic.ocback.backstage.index.create_search')
         </div>
     </form>
 @endsection
@@ -59,28 +30,7 @@
                 <div id="datatables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
                         <div class="col-sm-12">
-                            <table class="table table-striped table-bordered dataTable no-footer" width="100%" cellspacing="0"  style="width: 100%;">
-                                <thead>
-                                <tr role="row">
-                                    <th class="sorting_asc"style="width: 60px;">卡号</th>
-                                    <th class="sorting" style="width: 60px;">姓名</th>
-                                    <th class="sorting" style="width: 60px;">编号</th>
-                                    <th class="sorting" style="width: 60px;">身份证</th>
-                                    <th class="sorting"  style="width: 60px;">官网账号</th>
-                                    <th class="sorting"  style="width: 60px;">油卡状态</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr role="row" class="odd">
-                                    <td class="sorting_1">Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            @include('themes.metronic.ocback.backstage.index.table_data')
                         </div>
                     </div>
                 </div>

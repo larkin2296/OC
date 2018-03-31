@@ -7,11 +7,11 @@ use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Purchasing.
+ * Class OilCard.
  *
  * @package namespace App\Repositories\Models;
  */
-class Purchasing extends Model implements Transformable
+class OilCard extends Model implements Transformable
 {
     use TransformableTrait;
 
@@ -20,9 +20,8 @@ class Purchasing extends Model implements Transformable
      *
      * @var array
      */
-    protected $table = 'purchasing';
+    protected $table = 'oil_card';
 
-    protected $fillable = ['oc_number','name','card_number','user_id','status','province','province_id','order_type','number'];
-
+    protected $fillable = ['user_id','oc_number','web_account','password','oc_code','name','identity','status'];
 
 }

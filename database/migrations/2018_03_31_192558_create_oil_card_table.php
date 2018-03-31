@@ -16,6 +16,7 @@ class CreateOilCardTable extends Migration
         Schema::create('oil_card', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
+            $table->string('name',255);
             $table->string('oc_number',255);
             $table->string('web_account',255);
             $table->string('password',255);

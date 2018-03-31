@@ -7,12 +7,18 @@
     </tr>
     </thead>
     <tbody>
+
+        @foreach($data as $v)
     <tr role="row" class="odd">
-        <td class="sorting_1">Airi Satou</td>
-        <td>Accountant</td>
-        <td>Tokyo</td>
-        <td>33</td>
-        <td>2008/11/28</td>
-    </tr>
+        <td>{{$v['oc_number']}}</td>
+        <td>{{$v['name']}}</td>
+        <td>{{$v['oc_code']}}</td>
+        <td>{{$v['identity']}}</td>
+        <td>{{$v['web_account']}}</td>
+        <td>{{$v['status']}}</td>
+     </tr>
+        @endforeach
+
+
     </tbody>
 </table>
