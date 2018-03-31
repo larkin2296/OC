@@ -10,7 +10,7 @@
     </div>
 @endsection
 @section('query')
-    <div class="panel form-element-padding">
+    <form class="panel form-element-padding" action="" data-type="json" method="post">
         <div class="panel-heading">
             <h4>添加油卡</h4>
         </div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 @endsection
 @section('panel')
     <div class="panel">
