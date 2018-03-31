@@ -257,4 +257,39 @@ return [
       'query'=>[],
       'panel'=>[],
     ],
+    //注册字段配置
+  'register'=>[
+        'name'=>[
+            'type'=>'text',
+            'c_name'=>'昵称'
+        ],
+        'truename'=>[
+            'type'=>'text',
+            'c_name'=>'真实姓名',
+        ],
+        'sex'=>[
+            'type'=>'radio',
+            'content'=>[
+                '0'=>[
+                    'key'=>'male',
+                    'c_name'=>'男',
+                    'value'=>'0',
+                ],
+                '1'=>[
+                    'key'=>'female',
+                    'c_name'=>'女',
+                    'value'=>'1',
+                ]
+            ],
+            'c_name'=>'性别',
+        ],
+        'email'=>[
+            'type'=>'text',
+            'c_name'=>'邮箱'
+        ],
+        'password'=>[
+            'type'=>'password',
+            'c_name'=>'密码',
+        ],
+  ]
 ];
