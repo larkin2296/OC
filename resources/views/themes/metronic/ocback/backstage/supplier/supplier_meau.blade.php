@@ -19,8 +19,8 @@
                 </li>
                 <li class=" ripple"> <a class="tree-toggle nav-header"><span class="fa fa-calendar-o"></span> 供货 <span class="fa-angle-right fa right-arrow text-right"></span> </a>
                     <ul class="nav nav-list tree">
-                        <li><a href="c_recharge/index" target="right">卡密供货</a></li>
-                        <li><a href="d_recharge/index" target="right">直冲供货</a></li>
+                        <li><a href="s_camilo/index" target="right">卡密供货</a></li>
+                        <li><a href="s_directly/index" target="right">直冲供货</a></li>
                     </ul>
                 </li>
             </ul>

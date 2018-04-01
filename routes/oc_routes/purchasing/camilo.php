@@ -1,6 +1,6 @@
 <?php
 
-$router->group([], function($router) {
+$router->group(['namespace'=>'Card\Purchasing'], function($router) {
 
     $router->group(['prefix' => 'camilo', 'as' => 'camilo.'], function($router) {
         $router->get('index', [

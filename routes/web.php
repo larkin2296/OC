@@ -61,9 +61,7 @@ $router->group(['middleware' => "web"], function($router) {
         /*后台首页*/
         require(__DIR__ . '/oc_routes/backstage/route.php');
         /*采购商*/
-        require(__DIR__ . '/oc_routes/purchasing/route.php');
-        /*供应商*/
-        require(__DIR__ . '/oc_routes/supplier/route.php');
+        require(__DIR__ . '/oc_routes/backstage.php');
 
 
 
