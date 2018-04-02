@@ -22,6 +22,10 @@ class SupplierCamiloService extends Service
     {
         $this->searchArray();
     }
+    public function platform_search($fields)
+    {
+        return $this->platformRepo->findWhere($fields)->all();
+    }
 
 
 }

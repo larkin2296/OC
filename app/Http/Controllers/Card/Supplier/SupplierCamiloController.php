@@ -14,9 +14,11 @@ class SupplierCamiloController extends Controller
         $this->service = $service;
     }
 
+    public function get_platform(){
+        return $this->service->platform_search(array('status'=>'0'));
+    }
     public function index(){
-        $results=$this->service->get_config_blade(config('oc.supplier.suppliercamilo'));
-        $results['data'] = '';
+        $results['arr'] = $this->get_platform();
         return view('themes.metronic.ocback.backstage.supplier.suppliercamilo')->with($results);
     }
     public function search(){

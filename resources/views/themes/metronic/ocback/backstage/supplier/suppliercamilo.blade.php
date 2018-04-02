@@ -9,21 +9,32 @@
         </div>
     </div>
 @endsection
+@section('choose')
+    <div class="panel form-element-padding">
+        <div class="panel-heading">
+            <h4>油卡平台选择</h4>
+        </div>
+        <div class="panel-body" style="padding-bottom:30px;">
+            @include('themes.metronic.ocback.backstage.index.platform')
+        </div>
+    </div>
+    @endsection
+
 @section('panel')
     <div class="panel">
         <div class="panel-heading">
-            <h3>卡密订单</h3>
+            <h3>提交卡密</h3>
         </div>
         <div class="panel-body">
             <div class="responsive-table">
                 <div id="datatables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
                         <div class="col-sm-12">
-                            @include('themes.metronic.ocback.backstage.index.table_data')
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-@endsection
+ @endsection

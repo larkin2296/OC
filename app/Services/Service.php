@@ -33,6 +33,7 @@ use App\Repositories\Interfaces\ManagementRepository;
 use App\Repositories\Interfaces\PurchaseRepository;
 use App\Repositories\Interfaces\PurchasingRepository;
 use App\Repositories\Interfaces\OilCardRepository;
+use App\Repositories\Interfaces\PlatformConfigRepository;
 
 
 class Service
@@ -67,6 +68,7 @@ class Service
     public $managementRepo;
     public $purchaseRepo;
     public $oilcardbindingRepo;
+    public $platformRepo;
 	public function __construct()
 	{
 		$this->userRepo = app(UserRepository::class);
@@ -99,5 +101,6 @@ class Service
         $this->managementRepo = app(ManagementRepository::class);
         $this->purchaseRepo = app(PurchaseRepository::class);
         $this->oilcardbindingRepo = app(OilCardRepository::class);
+        $this->platformRepo = app(PlatformConfigRepository::class);
     }
 }

@@ -90,35 +90,6 @@ return [
         ],
         //数据表配置
         'panel'=>[
-            '0'=>[
-                //对应字段
-                'ckey'=>'number',
-                //中文
-                'c_name'=>'订单号',
-            ],
-            '1'=>[
-                'ckey'=>'s_time',
-                'c_name'=>'截止时间',
-            ],
-            '2'=>[
-                'ckey'=>'total_price',
-                'c_name'=>'需求面额',
-            ],
-            '3'=>[
-                'ckey'=>'remark',
-                'c_name'=>'操作',
-                'content'=>[
-                    '0'=>[
-                        'type'=>'delete',
-                        'c_name'=>'取消',
-                    ],
-                    '1'=>[
-                        'type'=>'submit',
-                        'c_name'=>'供货',
-                    ]
-                ],
-
-           ],
         ],
     ],
     'suppliercamilo'=>[
@@ -127,34 +98,6 @@ return [
         ],
         //数据表配置
         'panel'=>[
-            '0'=>[
-                //对应字段
-                'ckey'=>'number',
-                //中文
-                'c_name'=>'订单号',
-            ],
-            '1'=>[
-                'ckey'=>'s_time',
-                'c_name'=>'截止时间',
-            ],
-            '2'=>[
-                'ckey'=>'total_price',
-                'c_name'=>'需求面额',
-            ],
-            '3'=>[
-                'ckey'=>'remark',
-                'c_name'=>'操作',
-                'content'=>[
-                    '0'=>[
-                        'type'=>'delete',
-                        'c_name'=>'取消',
-                    ],
-                    '1'=>[
-                        'type'=>'submit',
-                        'c_name'=>'供货',
-                    ]
-                ],
-            ],
         ],
     ],
 ];
