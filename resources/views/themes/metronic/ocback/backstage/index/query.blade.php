@@ -14,6 +14,7 @@
     <div class="col-md-12 padding-0 form-element">
         <div class="col-md-12">
             @yield('query')
+            @yield('choose')
             @yield('panel')
         </div>
     </div>
