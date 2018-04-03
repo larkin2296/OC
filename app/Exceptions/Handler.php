@@ -4,9 +4,16 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Traits\ExceptionTrait;
+use App\Traits\ResultTrait;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Validation\ValidationException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
+
+    use ExceptionTrait, ResultTrait;
     /**
      * A list of the exception types that are not reported.
      *
@@ -48,6 +55,29 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        // dd($exception);
+        if(env('APP_DEBUG') == true){
+            dd($exception);
+        }
+        if( $exception instanceof ValidationException ) {
+            return parent::render($request, $exception);
+        }
+        if( $exception instanceof AuthenticationException){
+            return parent::render($request, $exception);
+        }
+
+        if( $exception instanceof NotFoundHttpException){
+            return redirect('notfound');
+        }
+
+        if( request()->ajax() ) {
+            $results = array_merge($this->results, [
+                'message' => $this->handler($exception)
+            ]);
+
+            return response()->json($results);
+        } else {
+            abort(404, $this->handler($exception));
+        }
     }
 }

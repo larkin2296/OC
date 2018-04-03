@@ -20,7 +20,7 @@
                 <div id="datatables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
                         <div class="col-sm-12">
-                            @include('themes.metronic.ocback.backstage.index.table_data')
+                            {{--@include('themes.metronic.ocback.backstage.index.table_data')--}}
                         </div>
                     </div>
                 </div>

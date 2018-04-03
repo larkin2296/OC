@@ -8,6 +8,7 @@ use App\Repositories\Interfaces\LogisticsRepository;
 use App\Repositories\Interfaces\RegulationRepository;
 use App\Repositories\Interfaces\QuestionRepository;
 use App\Repositories\Interfaces\SourceRepository;
+//use App\Repositories\Interfaces\SupplierRepository;
 use App\Repositories\Interfaces\UserRepository;
 use App\Repositories\Interfaces\RoleRepository;
 use App\Repositories\Interfaces\PermissionRepository;
@@ -33,6 +34,7 @@ use App\Repositories\Interfaces\ManagementRepository;
 use App\Repositories\Interfaces\PurchaseRepository;
 use App\Repositories\Interfaces\PurchasingRepository;
 use App\Repositories\Interfaces\OilCardRepository;
+use App\Repositories\Interfaces\SupplierRepository;
 
 
 class Service
@@ -67,6 +69,8 @@ class Service
     public $managementRepo;
     public $purchaseRepo;
     public $oilcardbindingRepo;
+    public $supplierRepo;
+
 	public function __construct()
 	{
 		$this->userRepo = app(UserRepository::class);
@@ -99,5 +103,6 @@ class Service
         $this->managementRepo = app(ManagementRepository::class);
         $this->purchaseRepo = app(PurchaseRepository::class);
         $this->oilcardbindingRepo = app(OilCardRepository::class);
+        $this->supplierRepo = app(SupplierRepository::class);
     }
 }
