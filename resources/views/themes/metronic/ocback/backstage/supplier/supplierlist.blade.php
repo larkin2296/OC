@@ -1,13 +1,14 @@
 @extends('themes.metronic.ocback.backstage.index.query')
 @section('query')
-    <div class="panel form-element-padding">
+    <form role="form" class="panel form-element-padding"  method="post" action="{{route('admin.backstage.s_list.index')}}">
+        {{ csrf_field() }}
         <div class="panel-heading">
             <h4>查询条件</h4>
         </div>
         <div class="panel-body" style="padding-bottom:30px;">
             @include('themes.metronic.ocback.backstage.index.create_search')
         </div>
-    </div>
+    </form>
 @endsection
 
 @section('panel')

@@ -25,12 +25,18 @@
         <div class="panel-heading">
             <h3>提交卡密</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" style="height: 500px;overflow-y:scroll;">
             <div class="responsive-table">
                 <div id="datatables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                     <div class="row">
                         <div class="col-sm-12">
-
+                            {!! Form::open(['url'=>'']) !!}
+                            卡密：
+                            {!! Form::text("camilo_detail","",array('class'=>'camilo')) !!}
+                            金额：
+                            {!! Form::text("camilo_detail","",array('class'=>'price')) !!}
+                            {!! Form::submit("submit","提交") !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>
