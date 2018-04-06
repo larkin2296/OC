@@ -7,6 +7,7 @@
 <!-- plugins -->
 <script src="{{URL::asset('asset/js/plugins/jquery.nicescroll.js')}}"></script>
 <script src="{{URL::asset('oc/js/oc.js')}}"></script>
+<script src="{{URL::asset('js/vue.js')}}"></script>
 <script>
     $("#left-menu-2").click() ;
 </script>
