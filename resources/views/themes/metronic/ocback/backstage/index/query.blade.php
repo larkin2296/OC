@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 @include('themes.metronic.ocback.backstage.public.js.p_js')
 @include('themes.metronic.ocback.backstage.public.css.p_css')
-
+@yield('css')
 <body id="mimin" class="dashboard">
 <!-- start: Header -->
 <!-- end: Header -->
@@ -23,3 +23,4 @@
 
 </body>
 </html>
+@yield('script')

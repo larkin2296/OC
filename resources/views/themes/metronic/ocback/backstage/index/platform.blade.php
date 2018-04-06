@@ -3,7 +3,7 @@
         <div class="form-group">
             @endif
                 <div class="col-sm-2">
-                    <input class="submit btn btn-danger" name="{{$value['platform_code']}}" type="button" value="{{$value['platform_name']}}">
+                    <input class="submit btn btn-danger p_choose" id="{{$value['platform_code']}}" type="button" value="{{$value['platform_name']}}">
                 </div>
                 @if($key % 4 == 3)
         </div>
