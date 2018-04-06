@@ -63,7 +63,6 @@ $router->group(['middleware' => "web"], function($router) {
         /*采购商*/
         require(__DIR__ . '/oc_routes/backstage.php');
         /*文件上传*/
-        /*附件管理*/
         require(__DIR__ . '/oc_routes/attachment.php');
 
 
