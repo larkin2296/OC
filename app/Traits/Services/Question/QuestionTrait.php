@@ -4,6 +4,8 @@ namespace App\Traits\Services\Question;
 use Illuminate\Support\Facades\DB;
 use Mockery\Exception;
 use App\Repositories\Models\Question;
+use Mail;
+use HskyZhou\NineOrange\NineOrange;
 Trait QuestionTrait
 {
 
@@ -25,40 +27,41 @@ Trait QuestionTrait
     /**发送质疑**/
     public function send($question_id,$end_date,$content,$id,$status)
     {
-        /*开启事物*/
-        DB::beginTransaction();
-        try{
+       dd(1);
             /*同步主表数据*/
             $data = $this->questionRepo->update(['end_date'=>$end_date,'content'=>$content,'status'=>2],$question_id);
-                /*成功 增加发送次数*/
-                $structure = DB::table('question')->where('id',$question_id)->increment('sending');
-                /*更新次数*/
-                $str = $this->questionRepo->find($question_id);$sending = $str->sending;
-                $info = $this->questioningRepo->update(['sending'=>$sending],$id);
+            /*成功 增加发送次数*/
+            $structure = DB::table('question')->where('id',$question_id)->increment('sending');
+            /*更新次数*/
+            $str = $this->questionRepo->find($question_id);
+
+            $sending = $str->sending;
+
+            $info = $this->questioningRepo->update(['sending'=>$sending],$id);
                 /*区分邮件发送请求*/
                 if($status !=1 ){
                     if($structure&&$info&&$data){
-                        DB::commit();
+
                         return $info;
                     }else{
                         return false;
                     }
                 }else{
-                    #TODO 验证公司id(companies) 2.查询公司下所注册的邮箱(mail) 3.将当前需要发送的数据取出（send_information）
+
+                    #TODO 验证公司id(companies) 2.查询公司下所注册的邮箱(mail) 3.将当前需要发送的数据取出（send_information)
                    /*内容 标题 发件人名称 账号*/
                    /*虚拟数据*/
-//                   $company_id = 1;
-//                    $info = $this->checkMail($company_id,$id);
+                    $company_id = 1;
+                    dd($company_id);
+                    $info = $this->checkMail($company_id,$id);
                     if($structure&&$info&&$data){
-                        DB::commit();
+
                         return $info;
                     }else{
                         return false;
                     }
                 }
-        } catch(Exception $e){
-            DB::rollBack();
-        }
+
         /*业务*/
     }
     protected function checkMail($company_id,$id)

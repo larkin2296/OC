@@ -62,6 +62,9 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Interfaces\PurchaseRepository::class, \App\Repositories\Eloquents\PurchaseRepositoryEloquent::class);
         //$this->app->bind(\App\Repositories\Interfaces\PurchaseRepository::class, \App\Repositories\Eloquents\PurchaseRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\Interfaces\OilCardRepository::class, \App\Repositories\Eloquents\OilCardRepositoryEloquent::class);
+
+        $this->app->bind(\App\Repositories\Interfaces\SupplierRepository::class, \App\Repositories\Eloquents\SupplierRepositoryEloquent::class);
+
         $this->app->bind(\App\Repositories\Interfaces\PlatformConfigRepository::class, \App\Repositories\Eloquents\PlatformConfigRepositoryEloquent::class);
     }
 }
