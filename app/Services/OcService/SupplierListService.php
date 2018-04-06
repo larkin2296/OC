@@ -10,7 +10,7 @@ use App\Traits\ExceptionTrait;
 use App\Traits\ServiceTrait;
 use DB;
 use DataTables;
-
+use Excel;
 
 class SupplierListService extends Service
 {
@@ -49,7 +49,7 @@ class SupplierListService extends Service
         $userInformation = getUser();
         return $userInformation;
     }
-    //
+    //保存用户信息
     public function store($id)
     {
 
@@ -90,10 +90,27 @@ class SupplierListService extends Service
     public function cardPassEncryption()
     {
         try{
+            $exception = DB::transaction(function() {
 
-        } catch (Exception $e){
+                if( 1 ){
+
+                } else {
+                    throw new Exception(trans('code/store.destroy.fail'), 2);
+                }
+
+                return array_merge($this->results, [
+                    'result' => true,
+                    'message' => trans('code/store.destroy.success'),
+                ]);
+            });
+        } catch(Exception $e){
+            $exception = array_merge($this->results, [
+                'result' => false,
+                'message' => $this->handler($e, trans('code/store.destroy.fail')),
+            ]);
 
         }
+        return array_merge($this->results,$exception);
 
 
     }

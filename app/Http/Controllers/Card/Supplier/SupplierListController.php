@@ -63,7 +63,7 @@ class SupplierListController extends Controller
     public function cardencry()
     {
         $results = $this->service->cardIndex();
-        return response()->json($results);
+        return view(getThemeTemplate($this->folder.'.suppliercamilo'))->with($results);
     }
     /**
      * 卡密添加

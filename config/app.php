@@ -182,6 +182,8 @@ return [
         App\Providers\ComposerServiceProvider::class,
         /*语言*/
         Overtrue\LaravelPinyin\ServiceProvider::class,
+        /*excel*/
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -233,6 +235,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
          'Language' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
         'Form' => Illuminate\Html\FormFacade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

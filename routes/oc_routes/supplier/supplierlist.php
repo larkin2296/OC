@@ -25,6 +25,10 @@ $router->group(['namespace'=>'Card\Supplier'], function($router) {
             'as' => 'cardencry'
         ]);
         //卡密订单上传
+        $router->post('create', [
+            'uses' => 'SupplierListController@create',
+            'as' => 'create'
+        ]);
 
     });
 
