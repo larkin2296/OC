@@ -7,7 +7,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -26,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/admin/dash';
 
     /**
      * Create a new controller instance.
@@ -51,17 +50,11 @@ class LoginController extends Controller
      */
     protected function credentials($request)
     {
-        try{
-            $data = $request->only($this->username(), 'password');
+        $data = $request->only($this->username(), 'password');
 
-            return array_merge($data, [
-                'status' => getCommonCheckValue(true)
-            ]);
-        } catch (Exception $e){
-            dd($e);
-        }
-
+        //return $data;
+        return array_merge($data, [
+//            'status' => getCommonCheckValue(true)
+        ]);
     }
-
-
 }

@@ -24,8 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        dd(123);
-
       //  dd(route('admin.backstage.p_index'));
 //       return redirect()->route('admin.backstage.p_index');
         return view('home');

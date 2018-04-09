@@ -50,9 +50,7 @@ $router->group(['middleware' => "web"], function($router) {
         'as' => 'index',
        ])->name('home');
 
-            $router->get('create',function (){
-                    dd(123);
-            })->name('create');
+
 
 
     $router->group(['prefix' => 'admin', 'as' => 'admin.',], function ($router) {
