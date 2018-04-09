@@ -92,6 +92,10 @@ class SupplierListService extends Service
         try{
             $exception = DB::transaction(function() {
 
+                #TODO 上传文件上传获取文件内容&添加的卡密信息 结构数组的形式
+                //1：导入excel和添加卡密
+                //2：导入excel
+                //3；添加卡密
                 if( 1 ){
 
                 } else {

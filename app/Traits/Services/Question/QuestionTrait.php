@@ -27,7 +27,6 @@ Trait QuestionTrait
     /**发送质疑**/
     public function send($question_id,$end_date,$content,$id,$status)
     {
-       dd(1);
             /*同步主表数据*/
             $data = $this->questionRepo->update(['end_date'=>$end_date,'content'=>$content,'status'=>2],$question_id);
             /*成功 增加发送次数*/
